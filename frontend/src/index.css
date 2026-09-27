@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-[#07111F] text-slate-100 font-sans antialiased selection:bg-brand-blue/30 selection:text-brand-cyan;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07111F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1C2A3A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2F80ED;
+}
+
+/* Custom Glassmorphic Panels */
+.petrol-card {
+  @apply bg-[#0D1724]/90 border border-[#1C2A3A] rounded-md shadow-lg backdrop-blur-md;
+}
+
+.petrol-card-interactive {
+  @apply bg-[#0D1724]/90 border border-[#1C2A3A] rounded-md shadow-lg backdrop-blur-md transition-all duration-200 hover:border-brand-blue/60 hover:shadow-[0_0_15px_rgba(47,128,237,0.15)];
+}
+
+.petrol-card-critical {
+  @apply bg-[#140D14]/90 border border-red-500/40 rounded-md shadow-lg backdrop-blur-md shadow-red-500/10;
+}
+
+.petrol-badge {
+  @apply px-2 py-0.5 rounded text-xs font-mono font-medium tracking-wide uppercase;
+}
+
+/* Leaflet Dark Theme Overrides */
+.leaflet-container {
+  background: #07111F !important;
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+  background: #0D1724 !important;
+  color: #F1F5F9 !important;
+  border: 1px solid #1C2A3A !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8) !important;
+  border-radius: 6px !important;
+}
+
+.leaflet-popup-content {
+  margin: 12px 14px !important;
+  line-height: 1.4 !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: #94A3B8 !important;
+  padding: 6px !important;
+}
+
+.leaflet-container a.leaflet-popup-close-button:hover {
+  color: #22B8CF !important;
+}
